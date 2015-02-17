@@ -42,4 +42,19 @@ public class WCLibTest {
 		assertEquals(lib.countLines("hello\r\nworld"), 1);
 		assertEquals(lib.lines, 1);
 	}
+
+
+	@Test
+	public void countWords_should_return_1_for_hello () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.countWords("hello"), 1);
+		assertEquals(lib.words, 1);
+	}
+
+	@Test
+	public void countWords_should_return_1_for_hello_world_sperated_by_new_Line () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.countWords("hello\nworld"), 2);
+		assertEquals(lib.words, 2);
+	}
 }
