@@ -17,4 +17,15 @@ class WCLib {
 
 		return words;
 	}
+
+	public int countByes (String text) {
+		String[] listOfLines = text.split("\n");
+
+		for (String line : listOfLines) {
+			String[] listOfChars = line.split("");
+			characters += listOfChars.length;
+		}
+
+		return characters;
+	}
 }

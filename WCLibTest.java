@@ -57,4 +57,25 @@ public class WCLibTest {
 		assertEquals(lib.countWords("hello\nworld"), 2);
 		assertEquals(lib.words, 2);
 	}
+
+	// @Test
+	// public void countWords_should_return_1_for_hello_world_sperated_by_more_spaces () {
+	// 	WCLib lib = new WCLib();
+	// 	assertEquals(lib.countWords("hello         world"), 2);
+	// 	assertEquals(lib.words, 2);
+	// }
+
+	@Test
+	public void countBytes_should_return_5_for_hello () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.countByes("hello"), 5);
+		assertEquals(lib.characters, 5);
+	}
+
+	@Test
+	public void countBytes_should_return_11_for_hello () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.countByes("hello world"), 11);
+		assertEquals(lib.characters, 11);
+	}
 }
