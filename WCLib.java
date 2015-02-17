@@ -19,7 +19,6 @@ class WCLib {
 	}
 
 	public int countByes (String text) {
-		characters = text.length();
-		return characters;
+		return (characters =+ text.length()) & characters;
 	}
 }
