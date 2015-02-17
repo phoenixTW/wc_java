@@ -12,7 +12,12 @@ class WCLib {
 
 		for (String line : separatedByLine) {
 			String[] listOfWords = line.split(" ");
-			words += listOfWords.length;
+
+			for (String word : listOfWords) {
+				if(!word.isEmpty())
+					words += 1;
+			}
+			
 		}
 
 		return words;
