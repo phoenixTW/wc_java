@@ -21,4 +21,22 @@ public class WCLibTest {
 		WCLib lib = new WCLib();
 		assertEquals(lib.countLines("hello"), 0);
 	}
+
+	@Test
+	public void countLines_should_return_1_for_hello_world_sperated_by_new_line () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.countLines("hello\nworld"), 1);
+	}
+
+	@Test
+	public void countLines_should_return_2_for_hello_my_world_sperated_by_new_line () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.countLines("hello\nmy\nworld"), 2);
+	}
+
+	@Test
+	public void countLines_should_return_1_for_hello_my_world_sperated_by_new_line_with_return () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.countLines("hello\r\nworld"), 1);
+	}
 }

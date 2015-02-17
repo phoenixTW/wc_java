@@ -2,6 +2,7 @@ class WCLib {
 	int lines, words, characters;
 
 	public int countLines (String text) {
-		return 0;
+		String[] separated = text.split("\n");
+		return separated.length - 1;
 	}
 }
