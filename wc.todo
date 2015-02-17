@@ -1,0 +1,50 @@
+										v0.1
+
+						// ACCEPTANCE TEST //
+
+1. command should be :  java wc one.txt
+
+
+							suppose a file named one.txt contains 'hello world'.
+
+
+2. 	run : java wc one.txt
+	display : 0	2 11
+
+		- where 0 is the number of new line
+		- where 2 is the number of words
+		- where 11 is the byte count of that file
+
+
+						// TODO //
+
+1. Get scaffold ready
+	bash, sublime, wc.java, WCLib.java
+
+2. wc.java will take a standerd input from a text file
+	- It will read the texts from a text file
+	- The text will read as a string and evaluate the the action according to the text.
+
+3. Byte count of that text file (1 character = 1 byte)
+		-count length of the text by counting each character at a time.
+		- That number will be the byte count of that file
+
+4. Count the number of new lines in a text file
+		-Starts with the left hand side of text file from the begining
+		-When it finds a new line, add the count by one.
+
+5. Count the number of words in a text file
+		- Go by each character
+		- When it finds a single space after any character, count the whole number of character
+		  as a single word
+		- increament the counter by one.
+		- Give the total number of word as a output
+
+6. --version option will display the version information of the wc text file
+
+7. Integrate the parts of the app.
+	- Connect the wcModule.js with wc.js
+	- check if all files are working perfectly or not
+
+
+--------------------------------------------------------------------------------------------------------------------------
