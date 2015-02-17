@@ -19,13 +19,7 @@ class WCLib {
 	}
 
 	public int countByes (String text) {
-		String[] listOfLines = text.split("\n");
-
-		for (String line : listOfLines) {
-			String[] listOfChars = line.split("");
-			characters += listOfChars.length;
-		}
-
+		characters = text.length();
 		return characters;
 	}
 }

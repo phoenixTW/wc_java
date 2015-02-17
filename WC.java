@@ -1,5 +1,9 @@
 class WC {
 	public String evaluate (String text) {
-		return "0 2 11";
+		WCLib lib = new WCLib();
+		lib.countByes(text);
+		lib.countWords(text);
+		lib.countLines(text);
+		return lib.lines + " " + lib.words + " " + lib.characters;
 	}
 }

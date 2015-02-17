@@ -17,8 +17,15 @@ public class WCTest {
 
 	@Test
 	public void wc_should_return_0_3_14_for_hello_my_world () {
-		String sentence = new String("hello world");
+		String sentence = new String("hello my world");
 		WC newWC = new WC();
 		assertEquals(newWC.evaluate(sentence), "0 3 14");
+	}
+
+	@Test
+	public void wc_should_return_1_3_15_for_hello_newLine_my_world () {
+		String sentence = new String("hello\nmy world");
+		WC newWC = new WC();
+		assertEquals(newWC.evaluate(sentence), "1 3 14");
 	}
 }
