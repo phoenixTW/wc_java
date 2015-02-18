@@ -96,3 +96,29 @@
 2. If the option is -c then return the byte count in the texts
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------
+
+									v0.4
+
+
+						// ACCEPTANCE TEST //
+
+1. command should be :  java wc one.txt
+
+
+							suppose a file named one.txt contains 'hello world'.
+
+
+2. 	run : java wc one.txt -w
+	display : 2 one.txt
+
+		- where 2 is the number of words
+
+
+						// TODO //
+
+1. WC will take an option from the user like -w
+2. If the option is -w then return the byte count in the texts
+
+-----------------------------------------------------------------------------------------------------------------------------

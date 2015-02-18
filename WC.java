@@ -16,6 +16,7 @@ class WC {
 			switch(option) {
 				case "-l" : return "" + lib.countLines(text);
 				case "-c" : return "" + lib.countByes(text);
+				case "-w" : return "" + lib.countWords(text);
 			}
 		}
 
