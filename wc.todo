@@ -69,4 +69,30 @@
 						// TODO //
 
 1. WC will take an option from the user like -l
-2. If the option is -l then return the number of lines in the text
+2. If the option is -l then return the number of lines in the texts
+
+--------------------------------------------------------------------------------------------------------------------------
+
+									v0.3
+
+
+						// ACCEPTANCE TEST //
+
+1. command should be :  java wc one.txt
+
+
+							suppose a file named one.txt contains 'hello world'.
+
+
+2. 	run : java wc one.txt -c
+	display : 11 one.txt
+
+		- where 11 is the bytes count
+
+
+						// TODO //
+
+1. WC will take an option from the user like -c
+2. If the option is -c then return the byte count in the texts
+
+-----------------------------------------------------------------------------------------------------------------------------

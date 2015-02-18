@@ -1,6 +1,23 @@
 # WC
 WC, a unix commands, developed in JAVA
 
+##Version 0.3
+	
+	Options are introduced. For getting number of lines and byte count,
+	you have to enter -c.
+
+```sh
+	
+	Example:
+		one.txt: Hello World
+				 How are you?
+
+		Run as : java wc one.txt -c
+
+		Output:	 24 one.txt
+
+```
+
 ##Version 0.2
 	
 	Options are introduced. For getting only number of lines,

@@ -42,4 +42,18 @@ public class WCTest {
 		WC newWC = new WC("-l");
 		assertEquals(newWC.evaluate(sentence), "0");
 	}
+
+	@Test
+	public void wc_should_return_14_for_hello_newLine_my_world_when_c_option_is_given () {
+		String sentence = new String("hello\nmy world");
+		WC newWC = new WC("-c");
+		assertEquals(newWC.evaluate(sentence), "14");
+	}
+
+	@Test
+	public void wc_should_return_11_for_hello_world_when_c_option_is_given () {
+		String sentence = new String("hello world");
+		WC newWC = new WC("-c");
+		assertEquals(newWC.evaluate(sentence), "11");
+	}
 }

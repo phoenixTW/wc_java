@@ -15,6 +15,7 @@ class WC {
 		if(option != null) {
 			switch(option) {
 				case "-l" : return "" + lib.countLines(text);
+				case "-c" : return "" + lib.countByes(text);
 			}
 		}
 
