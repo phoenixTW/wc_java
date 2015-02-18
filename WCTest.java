@@ -28,4 +28,18 @@ public class WCTest {
 		WC newWC = new WC();
 		assertEquals(newWC.evaluate(sentence), "1 3 14");
 	}
+
+	@Test
+	public void wc_should_return_1_for_hello_newLine_my_world_when_l_option_is_given () {
+		String sentence = new String("hello\nmy world");
+		WC newWC = new WC("-l");
+		assertEquals(newWC.evaluate(sentence), "1");
+	}
+
+	@Test
+	public void wc_should_return_0_for_hello_world_when_l_option_is_given () {
+		String sentence = new String("hello world");
+		WC newWC = new WC("-l");
+		assertEquals(newWC.evaluate(sentence), "0");
+	}
 }
