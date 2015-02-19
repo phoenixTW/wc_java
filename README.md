@@ -27,7 +27,7 @@ WC, a unix commands, developed in JAVA
 
 		Run as : java wc one.txt -S
 
-		Output:	 11 Hello World one.txt
+		Output:	 11 Hello World  one.txt
 
 ```
 
