@@ -1,7 +1,7 @@
 # WC
 WC, a unix commands, developed in JAVA
 
-##Version 0.4
+##Version 1.0
 	
 	- Introduced option -L for getting the largest line of a file
 	- Introduced option -S for getting the smallest line of a file
