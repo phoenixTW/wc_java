@@ -11,18 +11,7 @@ class WCLib {
 	}
 
 	public int countWords (String text) {
-		String[] separatedByLine = text.split("\n");
-
-		for (String line : separatedByLine) {
-			String[] listOfWords = line.split(" ");
-
-			for (String word : listOfWords) {
-				if(!word.isEmpty())
-					words += 1;
-			}
-			
-		}
-
+		words = text.split("\\s+").length;
 		return words;
 	}
 
