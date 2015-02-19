@@ -1,6 +1,36 @@
 # WC
 WC, a unix commands, developed in JAVA
 
+##Version 0.4
+	
+	- Introduced option -L for getting the largest line of a file
+	- Introduced option -S for getting the smallest line of a file
+
+
+```sh
+	
+	Example:
+		one.txt: Hello World
+				 How are you?
+
+		Run as : java wc one.txt -L
+
+		Output:	 12 How are you? one.txt
+
+```
+
+```sh
+	
+	Example:
+		one.txt: Hello World
+				 How are you?
+
+		Run as : java wc one.txt -S
+
+		Output:	 11 Hello World one.txt
+
+```
+
 ##Version 0.4 Build 101
 
 	- File reading is fixed
