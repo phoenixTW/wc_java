@@ -1,26 +1,23 @@
+import java.io.*;
+
 class WC {
-	private String option;
+	public static void main(String[] args) throws IOException{
+		String filename = args[0];
+		String option = null;
+		String content = null;
 
-	public WC () {
-		option = null;
-	}
+		try {
+			option = args[1];
+			
+		} catch (Exception e) {
 
-	public WC(String usrOption) {
-		option = usrOption;
-	}
-
-	public String evaluate (String text) {
-		WCLib lib = new WCLib();
-		
-		if(option != null) {
-			switch(option) {
-				case "-l" : return "" + lib.countLines(text);
-				case "-c" : return "" + lib.countByes(text);
-				case "-w" : return "" + lib.countWords(text);
-			}
+			WCmain newWC = new WCmain();
+			FileHandler file = new FileHandler(filename);
+			content = file.readText();
+			System.out.println(newWC.evaluate(content) + "\t" + filename);
+			return;
 		}
 
-		return lib.countLines(text) + " " + lib.countWords(text) + " " + lib.countByes(text);
+		System.out.println(filename + "   " + option);
 	}
-
 }

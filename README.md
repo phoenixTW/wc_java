@@ -1,6 +1,11 @@
 # WC
 WC, a unix commands, developed in JAVA
 
+##Version 0.4 Build 100
+
+	- File reading is fixed
+	- User can read any file by giving the path
+
 ##Version 0.4
 	
 	Options are introduced. For getting number of lines and byte count and number of words,

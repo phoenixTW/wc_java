@@ -14,3 +14,7 @@ echo $?
 echo "---------------------UNIT TEST------------------------------------"
 java -cp ".;junit-4.10.jar" org.junit.runner.JUnitCore WCLibTest
 echo $?
+
+echo "--------------------- COMPLETED ---------------------------------"
+
+rm -f *.class
