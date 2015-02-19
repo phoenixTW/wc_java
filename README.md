@@ -6,6 +6,7 @@ WC, a unix commands, developed in JAVA
 	- File reading is fixed
 	- User can read any file by giving the path
 	- Options are working along with the filename
+	- Indentation is fixed
 
 ##Version 0.4 Build 100
 

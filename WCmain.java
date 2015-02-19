@@ -14,13 +14,13 @@ class WCmain {
 		
 		if(option != null) {
 			switch(option) {
-				case "-l" : return "" + lib.countLines(text);
-				case "-c" : return "" + lib.countByes(text);
-				case "-w" : return "" + lib.countWords(text);
+				case "-l" : return "\t" + lib.countLines(text);
+				case "-c" : return "\t" + lib.countByes(text);
+				case "-w" : return "\t" + lib.countWords(text);
 			}
 		}
 
-		return lib.countLines(text) + " " + lib.countWords(text) + " " + lib.countByes(text);
+		return "\t" + lib.countLines(text) + "\t" + lib.countWords(text) + "\t" + lib.countByes(text);
 	}
 
 }
