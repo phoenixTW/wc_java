@@ -79,4 +79,32 @@ public class WCTest {
 		assertEquals(content, "hello world");
 		assertEquals(file.path, "one.txt");
 	}
+
+	@Test
+	public void wc_should_return_hello_world_for_hello_world_when_S_option_is_given () {
+		String sentence = new String("hello world");
+		WCmain newWC = new WCmain("-S");
+		assertEquals(newWC.evaluate(sentence), "\t11\thello world");
+	}
+
+	@Test
+	public void wc_should_return_hello_for_hello_NL_my_world_when_S_option_is_given () {
+		String sentence = new String("hello\nmy world");
+		WCmain newWC = new WCmain("-S");
+		assertEquals(newWC.evaluate(sentence), "\t5\thello");
+	}
+
+	@Test
+	public void wc_should_return_hello_world_for_hello_world_when_L_option_is_given () {
+		String sentence = new String("hello world");
+		WCmain newWC = new WCmain("-L");
+		assertEquals(newWC.evaluate(sentence), "\t11\thello world");
+	}
+
+	@Test
+	public void wc_should_return_my_world_for_hello_NL_my_world_when_L_option_is_given () {
+		String sentence = new String("hello\nmy world");
+		WCmain newWC = new WCmain("-L");
+		assertEquals(newWC.evaluate(sentence), "\t8\tmy world");
+	}
 }

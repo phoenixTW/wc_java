@@ -1,5 +1,6 @@
 class WCLib {
 	int lines, words, characters;
+	String contentOfLine;
 
 	public int countLines (String text) {
 		String[] separated = text.split("\n");
@@ -25,5 +26,29 @@ class WCLib {
 
 	public int countByes (String text) {
 		return (characters =+ text.length()) & characters;
+	}
+
+	public int findShortestLine (String text) {
+		WCLib lib = new WCLib();
+		String[] separatedByLine = text.split("\n");
+
+		for (String line : separatedByLine) {
+			if(contentOfLine == null || contentOfLine.length() > line.length())
+				this.contentOfLine= line;
+		}
+
+		return lib.countByes(contentOfLine);
+	}
+
+	public int findLargestLine (String text) {
+		WCLib lib = new WCLib();
+		String[] separatedByLine = text.split("\n");
+
+		for (String line : separatedByLine) {
+			if(contentOfLine == null || contentOfLine.length() < line.length())
+				this.contentOfLine= line;
+		}
+
+		return lib.countByes(contentOfLine);
 	}
 }

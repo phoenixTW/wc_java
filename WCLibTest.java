@@ -78,4 +78,30 @@ public class WCLibTest {
 		assertEquals(lib.countByes("hello world"), 11);
 		assertEquals(lib.characters, 11);
 	}
+
+	@Test
+	public void findShortestLine_should_return_11_for_hello_world () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.findShortestLine("hello world"), 11);
+		assertEquals(lib.contentOfLine, "hello world");
+	}
+
+	@Test
+	public void findShortestLine_should_return_11_for_hello_NL_my_world () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.findShortestLine("hello\nmy world"), 5);
+	}
+
+	@Test
+	public void findLargestLine_should_return_11_for_hello_world () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.findLargestLine("hello world"), 11);
+		assertEquals(lib.contentOfLine, "hello world");
+	}
+
+	@Test
+	public void findLargestLine_should_return_11_for_hello_NL_my_world () {
+		WCLib lib = new WCLib();
+		assertEquals(lib.findLargestLine("hello\nmy world"), 8);
+	}
 }
