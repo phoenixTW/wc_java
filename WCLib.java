@@ -32,6 +32,7 @@ class WCLib {
 		WCLib lib = new WCLib();
 		String[] separatedByLine = text.split("\n");
 
+
 		for (String line : separatedByLine) {
 			if(contentOfLine == null || contentOfLine.length() > line.length())
 				this.contentOfLine= line;

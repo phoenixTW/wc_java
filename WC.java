@@ -18,6 +18,7 @@ class WC {
 		}
 
 		newWC = new WCmain(option);
-		System.out.println(newWC.evaluate(content) + "\t" + file.path);
+		System.out.println(newWC.evaluate(content));
+		System.out.println(" " + file.path);
 	}
 }
