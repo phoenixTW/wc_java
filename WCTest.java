@@ -33,42 +33,42 @@ public class WCTest {
 	@Test
 	public void wc_should_return_1_for_hello_newLine_my_world_when_l_option_is_given () {
 		String sentence = new String("hello\nmy world");
-		WCmain newWC = new WCmain("-l");
+		WCmain newWC = new WCmain("-l", null);
 		assertEquals(newWC.evaluate(sentence), "\t1");
 	}
 
 	@Test
 	public void wc_should_return_0_for_hello_world_when_l_option_is_given () {
 		String sentence = new String("hello world");
-		WCmain newWC = new WCmain("-l");
+		WCmain newWC = new WCmain("-l", null);
 		assertEquals(newWC.evaluate(sentence), "\t0");
-	}
+	}	
 
 	@Test
 	public void wc_should_return_14_for_hello_newLine_my_world_when_c_option_is_given () {
 		String sentence = new String("hello\nmy world");
-		WCmain newWC = new WCmain("-c");
+		WCmain newWC = new WCmain("-c", null);
 		assertEquals(newWC.evaluate(sentence), "\t14");
 	}
 
 	@Test
 	public void wc_should_return_11_for_hello_world_when_c_option_is_given () {
 		String sentence = new String("hello world");
-		WCmain newWC = new WCmain("-c");
+		WCmain newWC = new WCmain("-c", null);
 		assertEquals(newWC.evaluate(sentence), "\t11");
 	}
 
 	@Test
 	public void wc_should_return_3_for_hello_newLine_my_world_when_w_option_is_given () {
 		String sentence = new String("hello\nmy world");
-		WCmain newWC = new WCmain("-w");
+		WCmain newWC = new WCmain("-w", null);
 		assertEquals(newWC.evaluate(sentence), "\t3");
 	}
 
 	@Test
 	public void wc_should_return_2_for_hello_world_when_w_option_is_given () {
 		String sentence = new String("hello world");
-		WCmain newWC = new WCmain("-w");
+		WCmain newWC = new WCmain("-w", null);
 		assertEquals(newWC.evaluate(sentence), "\t2");
 	}
 
@@ -83,28 +83,28 @@ public class WCTest {
 	@Test
 	public void wc_should_return_hello_world_for_hello_world_when_S_option_is_given () {
 		String sentence = new String("hello world");
-		WCmain newWC = new WCmain("-S");
+		WCmain newWC = new WCmain("-S", null);
 		assertEquals(newWC.evaluate(sentence), "\t11\thello world");
 	}
 
 	@Test
 	public void wc_should_return_hello_for_hello_NL_my_world_when_S_option_is_given () {
 		String sentence = new String("hello\r\nmy world");
-		WCmain newWC = new WCmain("-S");
+		WCmain newWC = new WCmain("-S", null);
 		assertEquals(newWC.evaluate(sentence), "\t5\thello");
 	}
 
 	@Test
 	public void wc_should_return_hello_world_for_hello_world_when_L_option_is_given () {
 		String sentence = new String("hello world");
-		WCmain newWC = new WCmain("-L");
+		WCmain newWC = new WCmain("-L", null);
 		assertEquals(newWC.evaluate(sentence), "\t11\thello world");
 	}
 
 	@Test
 	public void wc_should_return_my_world_for_hello_NL_my_world_when_L_option_is_given () {
 		String sentence = new String("hello\r\nmy world");
-		WCmain newWC = new WCmain("-L");
+		WCmain newWC = new WCmain("-L", null);
 		assertEquals(newWC.evaluate(sentence), "\t8\tmy world");
 	}
 }

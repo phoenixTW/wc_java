@@ -1,11 +1,19 @@
 class WCmain {
 	private String option;
+	private String pathname;
 
 	public WCmain () {
+		this.pathname = null;
+		this.option = null;
+	}
+
+	public WCmain (String pathname) {
+		this.pathname = pathname;
 		option = null;
 	}
 
-	public WCmain(String usrOption) {
+	public WCmain(String usrOption, String pathname) {
+		this.pathname = pathname;
 		option = usrOption;
 	}
 

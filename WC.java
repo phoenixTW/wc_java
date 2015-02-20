@@ -5,7 +5,7 @@ class WC {
 		String filename = args[0];
 		String option = null;
 		String content = null;
-		WCmain newWC = new WCmain();
+		WCmain newWC = new WCmain(filename);
 		FileHandler file = new FileHandler(filename);
 		content = file.readText();
 
@@ -17,8 +17,7 @@ class WC {
 			return;
 		}
 
-		newWC = new WCmain(option);
+		newWC = new WCmain(option, filename);
 		System.out.println(newWC.evaluate(content) + "\t" + file.path);
-		// System.out.println(" " + file.path);
 	}
 }
